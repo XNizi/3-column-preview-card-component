@@ -1,0 +1,110 @@
+// font-family: 'Big Shoulders Display', cursive;
+// font-family: 'Lexend Deca', sans-serif;
+
+@use 'colors' as *;
+
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+html {
+   font-size: 62.5%;
+}
+body {
+   font-size: 1.5rem;
+   min-height: 100vh;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   padding: 40px 25px;
+   background-color: $Very-light-gray;
+   font-family: 'Lexend Deca', sans-serif;
+}
+.wrapper {
+   display: flex;
+   flex-direction: column;
+}
+.card {
+   padding: 30px;
+   height: 400px;
+   overflow: hidden;
+   &:first-child {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+   }
+   &:last-child {
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+   }
+   &__heading {
+      color: $Very-light-gray;
+      font-family: 'Big Shoulders Display', cursive;
+      font-size: 4rem;
+      margin: 20px 0;
+   }
+   &__content {
+      color: $Transparent-white;
+      margin-bottom: 35px;
+      font-size: 1.7rem;
+   }
+   &__button {
+      background-color: $Very-light-gray;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      &--one {
+         color: $Bright-orange;
+      }
+      &--two {
+         color: $Dark-cyan;
+      }
+      &--three {
+         color: $Very-dark-cyan;
+      }
+   }
+   &__one {
+      background-color: $Bright-orange;
+   }
+   &__two {
+      background-color: $Dark-cyan;
+   }
+   &__three {
+      background-color: $Very-dark-cyan;
+   }
+}
+@media (min-width: 768px) {
+   .wrapper {
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+   }
+   .card {
+      padding: 30px 49px;
+      width: 400px;
+      &:first-child {
+         border-top-left-radius: 12px;
+         border-bottom-left-radius: 12px;
+         border-top-right-radius: 0;
+         
+      }
+      &:last-child {
+         border-top-right-radius: 12px;
+         border-bottom-right-radius: 12px;
+         border-bottom-left-radius: 0;
+      }
+      &__content {
+         font-size: 1.5rem;
+      }
+      
+   }
+}
+@media (min-width: 992px) {
+   .card {
+      
+      &__content {
+       font-size: 1.7rem; 
+      }
+   }
+}
